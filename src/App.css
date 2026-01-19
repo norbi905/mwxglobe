@@ -1,0 +1,690 @@
+/* Reset everything to fill the screen */
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden; /* Prevents unwanted scrollbars */
+  background-color: #000;
+}
+
+/* The main container for the whole app */
+.app-container {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  /* RADIAL GRADIENT: 
+     Center: A deep navy/blue glow (#0a192f)
+     Edges: Pure black (#000) 
+  */
+  background: radial-gradient(circle at center, #1b1b1b 0%, #020408 70%, #000000 100%);
+  background-attachment: fixed;
+}
+
+
+
+/* Subtle pulse for the background glow */
+.animate-bg {
+  animation: glowPulse 10s ease-in-out infinite;
+}
+
+@keyframes glowPulse {
+  0%, 100% {
+    background: radial-gradient(circle at center, #0a192f 0%, #020408 70%, #000000 100%);
+  }
+  50% {
+    /* Slightly brighter blue in the center during transitions */
+    background: radial-gradient(circle at center, #102a4d 0%, #020408 75%, #000000 100%);
+  }
+}
+
+/* The Map fills the entire background */
+.map-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+/* The Search Overlay sits on top */
+.search-overlay {
+  position: absolute;
+  bottom: 50px; /* Distance from the bottom edge */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 500px; /* Maximum width of the search bar */
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  padding: 0 20px;
+  pointer-events: none; /* Allows clicks to pass through the container... */
+}
+.search-overlay > * {
+  pointer-events: auto; /* ...but enables clicks on the actual input */
+}
+
+/* The container now handles the "Input" look */
+.search-bar-wrapper {
+  display: flex;
+  align-items: center;
+  background: rgba(11, 11, 11, 0.8);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 30px;
+  padding: 4px 16px;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+/* This is the futuristic blue highlight you liked */
+.search-bar-wrapper:focus-within {
+  border-color: #4dabf7;
+  box-shadow: 0 0 15px rgba(77, 171, 247, 0.4);
+}
+
+/* Make the actual input invisible so it blends into the wrapper */
+.search-bar-wrapper input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  padding: 10px 0;
+  color: white;
+  font-size: 16px;
+}
+
+/* The X Button */
+.clear-x {
+  background: transparent;
+  border: none;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 18px;
+  cursor: pointer;
+  padding: 0 5px;
+  margin-left: 10px;
+  transition: color 0.2s;
+  /* Add the animation here */
+  animation: xFadeIn 0.3s ease forwards;
+}
+
+@keyframes xFadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.clear-x:hover {
+  color: #4dabf7; /* Glow blue on hover */
+}
+
+/* Position the overlay at the bottom center */
+.search-overlay {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 450px;
+  z-index: 20;
+}
+
+.marker-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: opacity 0.3s ease;
+  /* No transform here! MapLibre's 'anchor: bottom' handles it */
+}
+
+.marker-line {
+  width: 2px;
+  height: 60px; /* Adjust height to make them 'stick out' more or less */
+  background: linear-gradient(to bottom, rgba(77, 171, 247, 0.8), transparent);
+  box-shadow: 0 0 10px rgba(77, 171, 247, 0.5);
+}
+
+
+@keyframes cardFadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.card-media {
+  width: 100%;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+/* Container for the logo */
+.logo-overlay {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 10;
+  /* Ensure padding exists so the shadow isn't cut off at the screen edge */
+  padding: 10px; 
+}
+
+.logo-glass-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 15px; /* Reduced vertical padding */
+  background: rgba(11, 11, 11, 0.5);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  cursor: pointer;
+  
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  
+  /* 1. Adjust width to match your logo's natural shape */
+  /* If 250px is too small for 500px wide text, increase this */
+  width: 280px; 
+  height: 50px;  /* Slightly shorter height often helps text logos look 'centered' */
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(77, 171, 247, 0.2), 
+              inset 0 0 10px rgba(77, 171, 247, 0.1);
+  animation: breathe 4s infinite ease-in-out;
+}
+
+@keyframes breathe {
+  0% { box-shadow: 0 0 15px rgba(77, 171, 247, 0.2); }
+  50% { box-shadow: 0 0 25px rgba(77, 171, 247, 0.4); }
+  100% { box-shadow: 0 0 15px rgba(77, 171, 247, 0.2); }
+}
+
+.logo-glass-container:hover {
+  border-color: #4dabf7; /* Futuristic blue highlight on hover */
+  background: rgba(11, 11, 11, 0.75);
+  box-shadow: 0 0 15px rgba(77, 171, 247, 0.2), 0 8px 32px rgba(0, 0, 0, 0.4);
+  transform: translateY(-2px);
+  box-shadow: 0 0 25px rgba(77, 171, 247, 0.4),
+              inset 0 0 15px rgba(77, 171, 247, 0.2);
+}
+
+.logo-glass-container.collapsed {
+  width: 50px;   /* Match the height for a perfect square */
+  padding: 8px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(77, 171, 247, 0.3);
+}
+
+.app-logo {
+  /* 2. Change height to a percentage of the container to create 'internal padding' */
+  height: 70%; 
+  width: 100%;
+  
+  /* 3. Object-fit 'contain' is key, but 'object-position' ensures it stays centered */
+  object-fit: contain;
+  object-position: center;
+  
+  transition: opacity 0.3s ease;
+}
+
+.logo-icon {
+  height: 120%; 
+  width: 120%;
+  animation: logoPop 0.4s ease;
+}
+
+@keyframes logoPop {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.bg-texture-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* This creates the futuristic horizontal line texture */
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(77, 171, 247, 0.03) 3px
+  );
+  pointer-events: none;
+  z-index: 0; /* Lowest layer */
+}
+
+/* Container for the pulse on the globe surface */
+.pulse-wrapper {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+}
+
+/* The solid center dot */
+.pulse-dot {
+  width: 8px;
+  height: 8px;
+  background-color: #4dabf7;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #4dabf7;
+  z-index: 2;
+}
+
+/* The expanding animated ring */
+.pulse-ring {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 2px solid #4dabf7;
+  border-radius: 50%;
+  animation: sonar-pulse 2s ease-out infinite;
+  opacity: 0;
+  z-index: 1;
+}
+
+@keyframes sonar-pulse {
+  0% {
+    transform: scale(0.5);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
+.side-drawer {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  bottom: 20px;
+  width: 400px;
+  background: rgba(11, 11, 11, 0.85);
+  backdrop-filter: blur(20px);
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 24px;
+  z-index: 100;
+  padding: 40px;
+  color: white;
+  box-shadow: -10px 0 30px rgba(0,0,0,0.5);
+  animation: slideInRight 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes slideInRight {
+  from { transform: translateX(110%); }
+  to { transform: translateX(0); }
+}
+
+.modern-floating-card {
+  background: rgba(11, 11, 11, 0.7);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(77, 171, 247, 0.3);
+  padding: 12px 20px;
+  border-radius: 50px; /* Pill shape */
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.modern-floating-card:hover {
+  border-color: #4dabf7;
+  background: rgba(77, 171, 247, 0.1);
+  transform: translateY(-5px);
+}
+
+.card-title {
+  color: white
+}
+
+.card-subtitle {
+  color: rgb(214, 214, 214)
+}
+
+
+/* MEDIA DRAWER */
+/* Glass Panel Utility */
+.glass-panel {
+  background: rgba(11, 11, 11, 0.65) !important;
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+}
+
+.side-drawer {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  bottom: 20px;
+  width: 420px;
+  z-index: 1000;
+  border-radius: 24px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  overflow-y: auto;
+}
+
+/* Media Gallery Grid */
+.media-gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.media-card {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.media-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+}
+
+.media-card img, .media-card video {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Video Play Indicator */
+.video-wrapper { position: relative; }
+.play-overlay {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(77, 171, 247, 0.8);
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+}
+
+/* Full Screen Overlay */
+.full-screen-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.9);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(10px);
+  animation: fadeIn 0.3s ease;
+}
+
+.full-screen-overlay img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 8px;
+  box-shadow: 0 0 50px rgba(0,0,0,1);
+}
+
+.overlay-close {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  font-size: 35px;
+  color: white;
+  cursor: pointer;
+  z-index: 10001;
+  transition: transform 0.2s ease;
+}
+
+.overlay-close:hover {
+  transform: scale(1.1);
+  color: #4dabf7;
+}
+
+/* Glassmorphism Overlay */
+.glass-morph-overlay {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 9999;
+  background: rgba(10, 25, 47, 0.4);
+  backdrop-filter: blur(15px) saturate(160%);
+  -webkit-backdrop-filter: blur(15px) saturate(160%);
+  
+  display: flex; /* Changed from grid to flex for better control */
+  align-items: center;
+  justify-content: center;
+  padding: 60px 40px; /* Increased top padding to 60px */
+}
+
+.overlay-content-wrapper {
+  position: relative;
+  width: 90%;          /* Occupy 90% of screen width */
+  max-width: 1200px;   /* But don't get TOO huge on 4K monitors */
+  height: auto;
+  max-height: 85vh;    /* Keep it within the viewport height */
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 20px;       /* Internal padding so media doesn't touch the glass edges */
+  box-shadow: 0 30px 60px rgba(0,0,0,0.5);
+  overflow: hidden;
+}
+
+/* Video Aspect Ratio Hack (16:9) */
+.iframe-container {
+  position: relative;
+  width: 100%;         /* Stretch to fill the 90% wrapper */
+  padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+  height: 0;
+  border-radius: 12px;
+  background: #000;    /* Black background while loading */
+}
+
+.iframe-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.maximized-media {
+  display: block;
+  max-width: 100%;
+  max-height: 75vh;    /* Leave room for the caption at the bottom */
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 12px;
+}
+
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.overlay-caption {
+  color: white;
+  text-align: center;
+  padding: 15px 0 5px 0;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  font-weight: 300;
+}
+
+/* Placeholder for video cards in the drawer */
+.video-thumb-placeholder {
+  width: 100%;
+  height: 120px;
+  background: linear-gradient(45deg, #0a192f, #112240);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.play-icon {
+  font-size: 24px;
+  color: #4dabf7;
+  text-shadow: 0 0 10px rgba(77, 171, 247, 0.5);
+}
+
+/* Container for the links section */
+.project-links-container {
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.section-label {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 15px;
+}
+
+.links-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Glass Link Button */
+.action-link-button {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(77, 171, 247, 0.3); /* Same blue as logo/search */
+  border-radius: 12px;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(5px);
+}
+
+.action-link-button:hover {
+  background: rgba(77, 171, 247, 0.15);
+  border-color: rgba(77, 171, 247, 0.8);
+  box-shadow: 0 0 15px rgba(77, 171, 247, 0.3);
+  transform: translateY(-2px);
+}
+
+.link-icon {
+  font-size: 1.2rem;
+  color: #4dabf7; /* Your accent blue */
+}
+
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  
+  /* Glass Effect */
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  
+  /* Border & Glow matching your theme */
+  border: 1px solid rgba(77, 171, 247, 0.4);
+  border-radius: 10px;
+  
+  /* Icon Styling */
+  color: white;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  
+  /* Smooth Transitions */
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.close-btn:hover {
+  background: rgba(77, 171, 247, 0.15);
+  border-color: rgba(77, 171, 247, 0.8);
+  box-shadow: 0 0 15px rgba(77, 171, 247, 0.4);
+  transform: rotate(90deg) scale(1.1); /* Adds a cool rotation effect on hover */
+}
+
+.close-btn:active {
+  transform: scale(0.95);
+}
+
+.controls-overlay {
+  position: absolute;
+  bottom: 40px;
+  right: 40px;
+  z-index: 20;
+  pointer-events: none;
+}
+
+.glass-button.toggle-all {
+  pointer-events: auto;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 24px;
+  background: rgba(11, 11, 11, 0.8);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 30px;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+.glass-button.toggle-all:hover {
+  border-color: #4dabf7;
+  transform: translateY(-2px);
+  box-shadow: 0 0 20px rgba(77, 171, 247, 0.3);
+}
+
+/* Active State - Matches the Search Bar Focus */
+.glass-button.toggle-all.active {
+  border-color: #4dabf7;
+  background: rgba(77, 171, 247, 0.15);
+  box-shadow: 0 0 20px rgba(77, 171, 247, 0.5), 
+              inset 0 0 10px rgba(77, 171, 247, 0.2);
+}
+
+.glass-button.toggle-all .icon {
+  font-size: 1.2rem;
+}

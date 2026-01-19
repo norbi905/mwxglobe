@@ -1,0 +1,321 @@
+{
+  "Canada": {
+    "coords": [-106.3468, 56.1304],
+    "projects": [
+      {
+        "id": "aurora-01",
+        "title": "Aurora",
+        "lat": 43.99880,
+        "lng": -79.44829,
+        "description": "A high-altitude cinematic capture of the Northern Lights.",
+        "icon": "sparkles", 
+        "thumbnail": "https://path-to-small-preview.jpg",
+        "details": {
+          "longDescription": "Extended technical details about the Aurora project...",
+          "media": [
+            { "type": "image", "src": "https://metaworldx.com/wp-content/uploads/2025/01/Aurora-1.png", "caption": "Static Render" },
+            { "type": "image", "src": "https://metaworldx.com/wp-content/uploads/2025/01/Aurora-2.png", "caption": "Static Render" },
+            { "type": "image", "src": "https://metaworldx.com/wp-content/uploads/2025/01/Aurora-3.png", "caption": "Static Render" },
+            { "type": "image", "src": "https://metaworldx.com/wp-content/uploads/2025/01/Aurora-4.png", "caption": "Static Render" },
+            { "type": "image", "src": "https://metaworldx.com/wp-content/uploads/2025/01/Aurora-4-1.png", "caption": "Static Render" },
+            { "type": "image", "src": "https://metaworldx.com/wp-content/uploads/2025/01/Aurora-3-1.png", "caption": "Static Render" },
+            { "type": "image", "src": "https://metaworldx.com/wp-content/uploads/2025/01/Aurora-2-1.png", "caption": "Static Render" },
+            { "type": "image", "src": "https://metaworldx.com/wp-content/uploads/2025/01/Aurora-1-1.png", "caption": "Static Render" },
+            { "type": "image", "src": "https://metaworldx.com/wp-content/uploads/2025/01/Aurora-6.png", "caption": "Static Render" },
+            { "type": "image", "src": "https://metaworldx.com/wp-content/uploads/2025/01/Aurora-5.png", "caption": "Static Render" },
+            { "type": "video", "src": "https://youtu.be/DVYXIENRRNs", "caption": "Animation" }
+          ],
+          "links": [
+            { "label": "Visit Site", "url": "https://www.aurora.ca/business-and-development/auroras-digital-twin/" },
+            { "label": "Digital Twin", "url": "https://aurora.metaworldx.com/" }
+          ]
+        }
+      },
+      {
+        "id": "toronto-01",
+        "title": "Toronto",
+        "lat": 43.64253,
+        "lng": -79.38707,
+        "description": "A high-altitude cinematic capture of the Northern Lights.",
+        "icon": "sparkles", 
+        "thumbnail": "https://path-to-small-preview.jpg",
+        "details": {
+          "longDescription": "Extended technical details about the Aurora project...",
+          "media": [
+            { "type": "image", "src": "https://metaworldx.com/wp-content/uploads/2016/01/Toronto-Digital-Twin-4.jpg", "caption": "Static Render" },
+            { "type": "image", "src": "https://metaworldx.com/wp-content/uploads/2016/01/Toronto-Digital-Twin-3.jpg", "caption": "Static Render" },
+            { "type": "image", "src": "https://metaworldx.com/wp-content/uploads/2016/01/Toronto-Digital-Twin-2.jpg", "caption": "Static Render" },
+            { "type": "image", "src": "https://metaworldx.com/wp-content/uploads/2016/01/Toronto-Digital-Twin-1.jpg", "caption": "Static Render" },
+            { "type": "video", "src": "https://youtu.be/1K15kGJLS4k?si=5px3kd6FkvXPX0rD", "caption": "Animation" }
+          ],
+          "links": [{ "label": "Visit Site", "url": "https://metaworldx.com/project/toronto-digital-twin/" }]
+        }
+      }
+    ]
+  },
+  "Dubai": {
+    "coords": [25.20920, 55.27014],
+    "projects": [
+      {
+        "id": "airport-01",
+        "title": "Dubai Airport",
+        "lat": 25.25244,
+        "lng": 55.36828,
+        "description": "A high-altitude cinematic capture of the Northern Lights.",
+        "icon": "sparkles", 
+        "thumbnail": "https://path-to-small-preview.jpg",
+        "details": {
+          "longDescription": "Extended technical details about the Aurora project...",
+          "media": [
+            { "type": "image", "src": "https://metaworldx.com/wp-content/uploads/2025/01/Dubai-Airport-1.jpg", "caption": "Static Render" },
+            { "type": "image", "src": "https://metaworldx.com/wp-content/uploads/2025/01/Dubai-Airport-3.jpg", "caption": "Static Render" },
+            { "type": "image", "src": "https://metaworldx.com/wp-content/uploads/2025/01/Dubai-Airport-2.jpg", "caption": "Static Render" },
+            { "type": "image", "src": "https://metaworldx.com/wp-content/uploads/2025/01/Dubai-Airport-1.png", "caption": "Static Render" },
+            { "type": "video", "src": "https://youtu.be/DVYXIENRRNs", "caption": "Animation" }
+          ],
+          "links": [
+            { "label": "Visit Site", "url": "https://metaworldx.com/project/dubai-airport/" }
+          ]
+        }
+      },
+      {
+        "id": "siliconoasis-01",
+        "title": "Dubai Silicon Oasis",
+        "lat": 25.11858,
+        "lng": 55.38057,
+        "description": "A high-altitude cinematic capture of the Northern Lights.",
+        "icon": "sparkles", 
+        "thumbnail": "https://path-to-small-preview.jpg",
+        "details": {
+          "longDescription": "Extended technical details about the Aurora project...",
+          "media": [
+            { "type": "image", "src": "https://metaworldx.com/wp-content/uploads/2025/01/Dubai-Silicon-Oasis-1-scaled.jpg", "caption": "Static Render" },
+            { "type": "image", "src": "https://metaworldx.com/wp-content/uploads/2025/01/Dubai-Silicon-Oasis-2-scaled.jpg", "caption": "Static Render" },
+            { "type": "image", "src": "https://metaworldx.com/wp-content/uploads/2025/01/Dubai-Silicon-Oasis-3-scaled.jpg", "caption": "Static Render" },
+            { "type": "image", "src": "https://metaworldx.com/wp-content/uploads/2025/01/Dubai-Silicon-Oasis-4-scaled.jpg", "caption": "Static Render" },
+            { "type": "image", "src": "https://metaworldx.com/wp-content/uploads/2025/01/Dubai-Silicon-Oasis-2-1.jpg", "caption": "Static Render" },
+            { "type": "image", "src": "https://metaworldx.com/wp-content/uploads/2025/01/Dubai-Silicon-Oasis-1-1.jpg", "caption": "Static Render" },
+            { "type": "video", "src": "https://drive.google.com/file/d/1vFZjwqzJqT-ABV6dss4U4-jgn2P6vvMc/view?usp=sharing", "caption": "Animation" }
+          ],
+          "links": [
+            { "label": "Visit Site", "url": "https://metaworldx.com/project/dubai-airport/" },
+            { "label": "Digital Twin", "url": "https://connector.eagle3dstreaming.com/v5/adeeMWX/DubaiSiliconOasis/DubaiLatest" }
+          ]
+        }
+      }
+    ]
+  },
+  "Saudi": {
+    "coords": [25.20920, 55.27014],
+    "projects": [
+      {
+        "id": "thedam-01",
+        "title": "The Dam",
+        "lat": 17.70091,
+        "lng": 42.64870,
+        "description": "A high-altitude cinematic capture of the Northern Lights.",
+        "icon": "sparkles", 
+        "thumbnail": "https://path-to-small-preview.jpg",
+        "details": {
+          "longDescription": "Extended technical details about the Aurora project...",
+          "media": [
+            { "type": "image", "src": "https://metaworldx.com/wp-content/uploads/2025/01/The-Dam-1.png", "caption": "Static Render" },
+            { "type": "image", "src": "https://metaworldx.com/wp-content/uploads/2025/01/The-Dam-6.png", "caption": "Static Render" },
+            { "type": "image", "src": "https://metaworldx.com/wp-content/uploads/2025/01/The-Dam-4.png", "caption": "Static Render" },
+            { "type": "image", "src": "https://metaworldx.com/wp-content/uploads/2025/01/The-Dam-3.png", "caption": "Static Render" },
+            { "type": "image", "src": "https://metaworldx.com/wp-content/uploads/2025/01/The-Dam-2.png", "caption": "Static Render" },
+            { "type": "image", "src": "https://metaworldx.com/wp-content/uploads/2025/01/The-Dam-1.jpg", "caption": "Static Render" },
+            { "type": "video", "src": "https://youtu.be/DVYXIENRRNs", "caption": "Animation" }
+          ],
+          "links": [
+            { "label": "Visit Site", "url": "https://metaworldx.com/project/dubai-airport/" },
+            { "label": "Digital Twin", "url": "https://connector.eagle3dstreaming.com/v5/adeeMWX/Dam/Dam" }
+          ]
+        }
+      },
+      {
+        "id": "luxuryvilla-01",
+        "title": "Luxury Smart Villa",
+        "lat": 29.80132,
+        "lng": 39.89514,
+        "description": "A high-altitude cinematic capture of the Northern Lights.",
+        "icon": "sparkles", 
+        "thumbnail": "https://path-to-small-preview.jpg",
+        "details": {
+          "longDescription": "Extended technical details about the Aurora project...",
+          "media": [
+            { "type": "image", "src": "https://metaworldx.com/wp-content/uploads/2025/01/Luxury-Smart-Villa-4.png", "caption": "Static Render" },
+            { "type": "image", "src": "https://metaworldx.com/wp-content/uploads/2025/01/Luxury-Smart-Villa-3.png", "caption": "Static Render" },
+            { "type": "image", "src": "https://metaworldx.com/wp-content/uploads/2025/01/Luxury-Smart-Villa-2.png", "caption": "Static Render" },
+            { "type": "image", "src": "https://metaworldx.com/wp-content/uploads/2025/01/Luxury-Smart-Villa-1.png", "caption": "Static Render" },
+            { "type": "video", "src": "https://youtu.be/DVYXIENRRNs", "caption": "Animation" }
+          ],
+          "links": [
+            { "label": "Visit Site", "url": "https://metaworldx.com/project/dubai-airport/" }
+          ]
+        }
+      },
+      {
+        "id": "neom-01",
+        "title": "Neom",
+        "lat": 28.09779,
+        "lng": 35.11815,
+        "description": "A high-altitude cinematic capture of the Northern Lights.",
+        "icon": "sparkles", 
+        "thumbnail": "https://path-to-small-preview.jpg",
+        "details": {
+          "longDescription": "Extended technical details about the Aurora project...",
+          "media": [
+            { "type": "video", "src": "https://drive.google.com/file/d/1FdFvLSLDGPo5uSviu3fQMA3s_WXKfqkK/view?usp=sharing", "caption": "Animation" }
+          ],
+          "links": [
+            { "label": "Digital Twin", "url": "https://connector.eagle3dstreaming.com/v5/adeeMWX/Neom/Neom" }
+          ]
+        }
+      }
+    ]
+  },
+   "LA": {
+    "coords": [25.20920, 55.27014],
+    "projects": [
+      {
+        "id": "losangeles-01",
+        "title": "LA Wildfires",
+        "lat": 34.05172,
+        "lng": -118.27843,
+        "description": "A high-altitude cinematic capture of the Northern Lights.",
+        "icon": "sparkles", 
+        "thumbnail": "https://path-to-small-preview.jpg",
+        "details": {
+          "longDescription": "Extended technical details about the Aurora project...",
+          "media": [
+            { "type": "image", "src": "https://metaworldx.com/wp-content/uploads/2025/01/LA-Wildfires-5.png", "caption": "Static Render" },
+            { "type": "image", "src": "https://metaworldx.com/wp-content/uploads/2025/01/LA-Wildfires-4.png", "caption": "Static Render" },
+            { "type": "image", "src": "https://metaworldx.com/wp-content/uploads/2025/01/LA-Wildfires-3.png", "caption": "Static Render" },
+            { "type": "image", "src": "https://metaworldx.com/wp-content/uploads/2025/01/LA-Wildfires-2.png", "caption": "Static Render" },
+            { "type": "image", "src": "https://metaworldx.com/wp-content/uploads/2025/01/LA-Wildfires-1.png", "caption": "Static Render" },
+            { "type": "video", "src": "https://youtu.be/DVYXIENRRNs", "caption": "Animation" }
+          ],
+          "links": [
+            { "label": "Visit Site", "url": "https://metaworldx.com/project/la-wildfire/" },
+            { "label": "Digital Twin", "url": "https://aurora.metaworldx.com/" }
+          ]
+        }
+      }
+    ]
+  },
+  "caribbean": {
+    "coords": [25.20920, 55.27014],
+    "projects": [
+      {
+        "id": "martinique-01",
+        "title": "Martinique",
+        "lat": 14.68601,
+        "lng": -61.03383,
+        "description": "A high-altitude cinematic capture of the Northern Lights.",
+        "icon": "sparkles", 
+        "thumbnail": "https://path-to-small-preview.jpg",
+        "details": {
+          "longDescription": "Extended technical details about the Aurora project...",
+          "media": [
+            { "type": "image", "src": "https://metaworldx.com/wp-content/uploads/2025/01/Martinique-3.png", "caption": "Static Render" },
+            { "type": "image", "src": "https://metaworldx.com/wp-content/uploads/2025/01/Martinique-2.png", "caption": "Static Render" },
+            { "type": "image", "src": "https://metaworldx.com/wp-content/uploads/2025/01/Martinique-1.png", "caption": "Static Render" },
+            { "type": "video", "src": "https://youtu.be/DVYXIENRRNs", "caption": "Animation" }
+          ],
+          "links": [
+            { "label": "Visit Site", "url": "https://metaworldx.com/project/la-wildfire/" },
+            { "label": "Digital Twin", "url": "https://aurora.metaworldx.com/" }
+          ]
+        }
+      }
+    ]
+  },
+  "madrid": {
+    "coords": [25.20920, 55.27014],
+    "projects": [
+      {
+        "id": "madrid-01",
+        "title": "Madrid",
+        "lat": 14.68601,
+        "lng": -61.03383,
+        "description": "A high-altitude cinematic capture of the Northern Lights.",
+        "icon": "sparkles", 
+        "thumbnail": "https://path-to-small-preview.jpg",
+        "details": {
+          "longDescription": "Extended technical details about the Aurora project...",
+          "media": [
+            
+          ],
+          "links": [
+            { "label": "Digital Twin", "url": "https://connector.eagle3dstreaming.com/v5/adeeMWX/Madrid/MadridMwX" }
+          ]
+        }
+      }
+    ]
+  },
+  "oman": {
+    "coords": [25.20920, 55.27014],
+    "projects": [
+      {
+        "id": "muscat-01",
+        "title": "Muscat Bay",
+        "lat": 23.54829,
+        "lng": 58.63562,
+        "description": "A high-altitude cinematic capture of the Northern Lights.",
+        "icon": "sparkles", 
+        "thumbnail": "https://path-to-small-preview.jpg",
+        "details": {
+          "longDescription": "Extended technical details about the Aurora project...",
+          "media": [
+            { "type": "video", "src": "https://drive.google.com/file/d/1oHVUY3ayIuNftSdvD-Vio7arsHC7nX2F/view?usp=sharing", "caption": "Animation" }
+          ],
+          "links": [
+            { "label": "Digital Twin", "url": "https://connector.eagle3dstreaming.com/v6/eyJvd25lciI6ImFkZWVNV1giLCJhcHBOYW1lIjoiTXVzY2F0QmF5IiwiY29uZmlnTmFtZSI6Ik11c2NhdEJheSJ9" }
+          ]
+        }
+      },
+      {
+        "id": "waste-01",
+        "title": "Waste Management",
+        "lat": 23.29889,
+        "lng": 58.42928,
+        "description": "A high-altitude cinematic capture of the Northern Lights.",
+        "icon": "sparkles", 
+        "thumbnail": "https://path-to-small-preview.jpg",
+        "details": {
+          "longDescription": "Extended technical details about the Aurora project...",
+          "media": [
+            
+          ],
+          "links": [
+            { "label": "Digital Twin", "url": "https://connector.eagle3dstreaming.com/v6/eyJvd25lciI6ImFkZWVNV1giLCJhcHBOYW1lIjoiV2FzdGVNYW5hZ2VtZW50IiwiY29uZmlnTmFtZSI6Ik9tYW5XTSJ9" }
+          ]
+        }
+      }
+    ]
+  },
+  "pennsylvania": {
+    "coords": [25.20920, 55.27014],
+    "projects": [
+      {
+        "id": "school-01",
+        "title": "School",
+        "lat": 40.60305,
+        "lng": -75.48126,
+        "description": "A high-altitude cinematic capture of the Northern Lights.",
+        "icon": "sparkles", 
+        "thumbnail": "https://path-to-small-preview.jpg",
+        "details": {
+          "longDescription": "Extended technical details about the Aurora project...",
+          "media": [
+            { "type": "video", "src": "https://drive.google.com/file/d/1CndIh_jQMLhQRTPFzmpBTKrynGWARqDn/view?usp=sharing", "caption": "Animation" }
+          ],
+          "links": [
+            { "label": "Digital Twin", "url": "https://connector.eagle3dstreaming.com/v5/adeeMWX/School/School" }
+          ]
+        }
+      }
+    ]
+  }
+}
