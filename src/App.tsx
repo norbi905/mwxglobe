@@ -56,12 +56,13 @@ export default function App() {
     <div className="app-container">
       <div className="bg-texture-overlay" />
       
+      {/* Logo Overlay */}
       <div className="logo-overlay">
         <div 
           className={`logo-glass-container ${selectedProject ? 'collapsed' : ''}`} 
           onClick={() => {
-             setShowAll(false);
-             handleSearch("");
+              setShowAll(false);
+              handleSearch("");
           }}
         >
           <img 
@@ -72,6 +73,7 @@ export default function App() {
         </div>
       </div>
 
+      {/* Map */}
       <div className="map-wrapper">
         <GlobeMap 
           focusCoords={focusCoords} 
@@ -83,24 +85,31 @@ export default function App() {
         />
       </div>
 
-      <div className="controls-overlay">
-        <button 
-          className={`glass-button toggle-all ${showAll ? 'active' : ''}`}
-          onClick={toggleShowAll}
-        >
-          <span className="icon">{showAll ? "🌍" : "🗺️"}</span>
-          {showAll ? "Hide All Projects" : "View All Projects"}
-        </button>
-      </div>
-
+      {/* Side Drawer */}
       <SideDrawer 
         project={selectedProject} 
         onClose={() => setSelectedProject(null)} 
       />
 
-      <div className="search-overlay">
-        <div className="search-bar-container">
-          <SearchBar onSearch={handleSearch} />
+      {/* NEW: Unified Bottom Controls */}
+      <div className="bottom-controls-container">
+        <div className="search-overlay">
+          <div className="search-bar-container">
+            <SearchBar onSearch={handleSearch} />
+          </div>
+        </div>
+
+        <div className="controls-overlay">
+          <button 
+            className={`glass-button toggle-all ${showAll ? 'active' : ''}`}
+            onClick={toggleShowAll}
+          >
+            <span className="icon">{showAll ? "🌍" : "🗺️"}</span>
+            {/* We wrap the text so we can hide it via CSS on mobile */}
+            <span className="button-text">
+              {showAll ? "Hide All Projects" : "View All Projects"}
+            </span>
+          </button>
         </div>
       </div>
     </div>

@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import "../App.css";
+import { getImageUrl } from '../utils/imageLoader';
 
 export default function SideDrawer({ project, onClose }) {
   const [activeMedia, setActiveMedia] = useState<any | null>(null);
@@ -7,27 +8,27 @@ export default function SideDrawer({ project, onClose }) {
   if (!project) return null;
 
   // Helper to convert standard links to Embed links
-const getEmbedUrl = (src: string) => {
-  if (!src) return "";
-  
-  // Handle YouTube
-  if (src.includes('youtube.com/watch?v=')) {
-    const videoId = src.split('v=')[1]?.split('&')[0];
-    return `https://www.youtube.com/embed/${videoId}`;
-  }
-  if (src.includes('youtu.be/')) {
-    const videoId = src.split('youtu.be/')[1]?.split('?')[0];
-    return `https://www.youtube.com/embed/${videoId}`;
-  }
+  const getEmbedUrl = (src: string) => {
+    if (!src) return "";
+    
+    // Handle YouTube
+    if (src.includes('youtube.com/watch?v=')) {
+      const videoId = src.split('v=')[1]?.split('&')[0];
+      return `https://www.youtube.com/embed/${videoId}`;
+    }
+    if (src.includes('youtu.be/')) {
+      const videoId = src.split('youtu.be/')[1]?.split('?')[0];
+      return `https://www.youtube.com/embed/${videoId}`;
+    }
 
-  // Handle Google Drive
-  if (src.includes('drive.google.com')) {
-    // Replaces /view or /edit with /preview
-    return src.replace(/\/view.*|\/edit.*/, '/preview');
-  }
-  
-  return src;
-};
+    // Handle Google Drive
+    if (src.includes('drive.google.com')) {
+      // Replaces /view or /edit with /preview
+      return src.replace(/\/view.*|\/edit.*/, '/preview');
+    }
+    
+    return src;
+  };
 
   return (
     <>
@@ -57,7 +58,7 @@ const getEmbedUrl = (src: string) => {
                 onClick={() => setActiveMedia(item)}
               >
                 {item.type === 'image' ? (
-                  <img src={item.src} alt={item.caption} />
+                  <img src={getImageUrl(item.src)} alt={item.caption} />
                 ) : (
                   <div className="video-thumb-placeholder">
                     <div className="play-icon">▶</div>
@@ -100,7 +101,7 @@ const getEmbedUrl = (src: string) => {
           
           <div className="overlay-content-wrapper" onClick={(e) => e.stopPropagation()}>
             {activeMedia.type === 'image' ? (
-              <img src={activeMedia.src} className="maximized-media" alt="Full view" />
+              <img src={getImageUrl(activeMedia.src)} className="maximized-media" alt="Full view" />
             ) : (
               <div className="iframe-container" style={{ width: '100%', minWidth: '100%'}}>
                 <iframe

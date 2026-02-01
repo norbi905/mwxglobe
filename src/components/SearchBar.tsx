@@ -1,9 +1,13 @@
 import { useState } from "react";
 
-export default function SearchBar({ onSearch }) {
+interface SearchBarProps {
+  onSearch: (query: string) => void;
+}
+
+export default function SearchBar({ onSearch }: SearchBarProps) {
   const [query, setQuery] = useState("");
 
-  const handleKeyDown = (e) => {
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === "Enter") {
       onSearch(query);
     }
@@ -11,7 +15,7 @@ export default function SearchBar({ onSearch }) {
 
   const handleClear = () => {
     setQuery("");
-    onSearch(""); // Clears the map markers too
+    onSearch("");
   };
 
   return (

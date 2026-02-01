@@ -23,7 +23,8 @@
             { "type": "image", "src": "https://metaworldx.com/wp-content/uploads/2025/01/Aurora-1-1.png", "caption": "Static Render" },
             { "type": "image", "src": "https://metaworldx.com/wp-content/uploads/2025/01/Aurora-6.png", "caption": "Static Render" },
             { "type": "image", "src": "https://metaworldx.com/wp-content/uploads/2025/01/Aurora-5.png", "caption": "Static Render" },
-            { "type": "video", "src": "https://youtu.be/DVYXIENRRNs", "caption": "Animation" }
+            { "type": "video", "src": "https://youtu.be/DVYXIENRRNs", "caption": "Animation" },
+            { "type": "video", "src": "https://drive.google.com/drive/u/2/folders/1Yo_wg6BPJQBKJ-BLwkXaJIEbzUKpARho", "caption": "Animation" }
           ],
           "links": [
             { "label": "Visit Site", "url": "https://www.aurora.ca/business-and-development/auroras-digital-twin/" },
@@ -71,7 +72,7 @@
             { "type": "image", "src": "https://metaworldx.com/wp-content/uploads/2025/01/Dubai-Airport-3.jpg", "caption": "Static Render" },
             { "type": "image", "src": "https://metaworldx.com/wp-content/uploads/2025/01/Dubai-Airport-2.jpg", "caption": "Static Render" },
             { "type": "image", "src": "https://metaworldx.com/wp-content/uploads/2025/01/Dubai-Airport-1.png", "caption": "Static Render" },
-            { "type": "video", "src": "https://youtu.be/DVYXIENRRNs", "caption": "Animation" }
+            { "type": "video", "src": "https://drive.google.com/file/d/1JXmecujvx2r4Pjy7eDvfzDX97qS2tDYL/view?usp=sharing", "caption": "Animation" }
           ],
           "links": [
             { "label": "Visit Site", "url": "https://metaworldx.com/project/dubai-airport/" }
@@ -98,7 +99,7 @@
             { "type": "video", "src": "https://drive.google.com/file/d/1vFZjwqzJqT-ABV6dss4U4-jgn2P6vvMc/view?usp=sharing", "caption": "Animation" }
           ],
           "links": [
-            { "label": "Visit Site", "url": "https://metaworldx.com/project/dubai-airport/" },
+            { "label": "Visit Site", "url": "https://metaworldx.com/project/dubai-silicon-oasis/" },
             { "label": "Digital Twin", "url": "https://connector.eagle3dstreaming.com/v5/adeeMWX/DubaiSiliconOasis/DubaiLatest" }
           ]
         }
@@ -125,10 +126,10 @@
             { "type": "image", "src": "https://metaworldx.com/wp-content/uploads/2025/01/The-Dam-3.png", "caption": "Static Render" },
             { "type": "image", "src": "https://metaworldx.com/wp-content/uploads/2025/01/The-Dam-2.png", "caption": "Static Render" },
             { "type": "image", "src": "https://metaworldx.com/wp-content/uploads/2025/01/The-Dam-1.jpg", "caption": "Static Render" },
-            { "type": "video", "src": "https://youtu.be/DVYXIENRRNs", "caption": "Animation" }
+            { "type": "video", "src": "https://drive.google.com/file/d/1UHKQNljM_qGJiFg_HHplmBdmXH2ak2fZ/view?usp=sharing", "caption": "Animation" }
           ],
           "links": [
-            { "label": "Visit Site", "url": "https://metaworldx.com/project/dubai-airport/" },
+            { "label": "Visit Site", "url": "https://metaworldx.com/project/the-dam/" },
             { "label": "Digital Twin", "url": "https://connector.eagle3dstreaming.com/v5/adeeMWX/Dam/Dam" }
           ]
         }
@@ -148,10 +149,10 @@
             { "type": "image", "src": "https://metaworldx.com/wp-content/uploads/2025/01/Luxury-Smart-Villa-3.png", "caption": "Static Render" },
             { "type": "image", "src": "https://metaworldx.com/wp-content/uploads/2025/01/Luxury-Smart-Villa-2.png", "caption": "Static Render" },
             { "type": "image", "src": "https://metaworldx.com/wp-content/uploads/2025/01/Luxury-Smart-Villa-1.png", "caption": "Static Render" },
-            { "type": "video", "src": "https://youtu.be/DVYXIENRRNs", "caption": "Animation" }
+            { "type": "video", "src": "https://drive.google.com/file/d/199iS-L0AkE-tPdJ_DbvcUs9ZcAdlgCfm/view?usp=sharing", "caption": "Animation" }
           ],
           "links": [
-            { "label": "Visit Site", "url": "https://metaworldx.com/project/dubai-airport/" }
+            { "label": "Visit Site", "url": "https://metaworldx.com/project/luxury-smart-villa/" }
           ]
         }
       },
@@ -194,11 +195,10 @@
             { "type": "image", "src": "https://metaworldx.com/wp-content/uploads/2025/01/LA-Wildfires-3.png", "caption": "Static Render" },
             { "type": "image", "src": "https://metaworldx.com/wp-content/uploads/2025/01/LA-Wildfires-2.png", "caption": "Static Render" },
             { "type": "image", "src": "https://metaworldx.com/wp-content/uploads/2025/01/LA-Wildfires-1.png", "caption": "Static Render" },
-            { "type": "video", "src": "https://youtu.be/DVYXIENRRNs", "caption": "Animation" }
+            { "type": "video", "src": "https://drive.google.com/file/d/1_GPzTuUNr8Aa7hLRRTtNn65qLsqYQagA/view?usp=sharing", "caption": "Animation" }
           ],
           "links": [
-            { "label": "Visit Site", "url": "https://metaworldx.com/project/la-wildfire/" },
-            { "label": "Digital Twin", "url": "https://aurora.metaworldx.com/" }
+            { "label": "Visit Site", "url": "https://metaworldx.com/project/la-wildfire/" }
           ]
         }
       }
@@ -224,8 +224,7 @@
             { "type": "video", "src": "https://youtu.be/DVYXIENRRNs", "caption": "Animation" }
           ],
           "links": [
-            { "label": "Visit Site", "url": "https://metaworldx.com/project/la-wildfire/" },
-            { "label": "Digital Twin", "url": "https://aurora.metaworldx.com/" }
+            { "label": "Visit Site", "url": "https://metaworldx.com/project/martinique/" }
           ]
         }
       }
@@ -237,8 +236,8 @@
       {
         "id": "madrid-01",
         "title": "Madrid",
-        "lat": 14.68601,
-        "lng": -61.03383,
+        "lat": 40.44140,
+        "lng": -3.68898,
         "description": "A high-altitude cinematic capture of the Northern Lights.",
         "icon": "sparkles", 
         "thumbnail": "https://path-to-small-preview.jpg",
@@ -286,7 +285,7 @@
         "details": {
           "longDescription": "Extended technical details about the Aurora project...",
           "media": [
-            
+            { "type": "video", "src": "https://drive.google.com/file/d/1uHCnnYErFhbcD97iYNTpG1IGR_bqvj-t/view?usp=sharing", "caption": "Animation" }
           ],
           "links": [
             { "label": "Digital Twin", "url": "https://connector.eagle3dstreaming.com/v6/eyJvd25lciI6ImFkZWVNV1giLCJhcHBOYW1lIjoiV2FzdGVNYW5hZ2VtZW50IiwiY29uZmlnTmFtZSI6Ik9tYW5XTSJ9" }
@@ -309,10 +308,34 @@
         "details": {
           "longDescription": "Extended technical details about the Aurora project...",
           "media": [
+            { "type": "image", "src": "/images/projects/school/IMG_The_School(1).jpg", "caption": "Static Render" },
             { "type": "video", "src": "https://drive.google.com/file/d/1CndIh_jQMLhQRTPFzmpBTKrynGWARqDn/view?usp=sharing", "caption": "Animation" }
           ],
           "links": [
-            { "label": "Digital Twin", "url": "https://connector.eagle3dstreaming.com/v5/adeeMWX/School/School" }
+            { "label": "Digital Twin (Unreal)", "url": "https://connector.eagle3dstreaming.com/v5/adeeMWX/School/School" },
+            { "label": "Digital Twin (WebGL)", "url": "https://mustafalazzawe.github.io/mwx-web-app/" }
+          ]
+        }
+      }
+    ]
+  },
+  "spain": {
+    "coords": [-4.1317142, 36.8235439],
+    "projects": [
+      {
+        "id": "spain-01",
+        "title": "Spain",
+        "lat": -4.1317142,
+        "lng": 36.8235439,
+        "description": "A high-altitude cinematic capture of the Northern Lights.",
+        "icon": "sparkles", 
+        "thumbnail": "https://path-to-small-preview.jpg",
+        "details": {
+          "longDescription": "Extended technical details about the Aurora project...",
+          "media": [
+          ],
+          "links": [
+            { "label": "Digital Twin", "url": "https://connector.eagle3dstreaming.com/v6/eyJvd25lciI6ImFkZWVNV1giLCJhcHBOYW1lIjoiTGliZWxpdW0iLCJjb25maWdOYW1lIjoiTGliZWxpdW0ifQ==" }
           ]
         }
       }

@@ -34,7 +34,7 @@ export default function GlobeMap({ focusCoords, activeProjectCoords, items, onPr
       style: "https://tiles.basemaps.cartocdn.com/gl/dark-matter-gl-style/style.json",
       center: [0, 20],
       zoom: 2.2,
-      antialias: true,
+      //antialias: true,
       attributionControl: false,
       maxTileCacheSize: 500,
       fadeDuration: 300,
